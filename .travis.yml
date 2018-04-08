@@ -10,6 +10,7 @@ services:
 
 
 before_install:
+  - mysql -e ALTER USER "root"@"localhost" IDENTIFIED BY "root";
   - mysql -e 'CREATE DATABASE IF NOT EXISTS blogadamzerella;'
 
 
