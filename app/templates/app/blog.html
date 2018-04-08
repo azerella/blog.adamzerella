@@ -1,0 +1,15 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}{{popular_blog_title}}{% endblock %}
+{% block css_file_static %}{% static 'app/stylesheets/blog.css'%}{% endblock %}
+
+{% block content %}
+        <div class="blog">
+            <h1>New hotness</h1>
+            {% for entry in blogs %}
+                <h2>{{ entry.title }}</h2>
+                <p>{{ entry.content }}</p>
+            {% endfor %}
+        </div>
+{% endblock %}

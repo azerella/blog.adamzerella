@@ -1,7 +1,28 @@
-  language: python
-  python:
-    - "3.6"
-  install:
-    pip install Django
-  script:
-    - python -Wall manage.py test app
+language: python
+
+
+python:
+  - "3.6"
+
+
+services:
+  - mysql
+
+
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS blogadamzerella;'
+
+
+test:
+  adapter: mysql2
+  database: blogadamzerella
+  username: root
+  encoding: utf8
+
+
+install:
+  - pip install Django
+  - pip install mysqlclient
+
+script:
+  - python -Wall manage.py test app

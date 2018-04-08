@@ -1,0 +1,42 @@
+[
+  {
+    "model": "app.blog",
+    "pk": 1,
+    "fields": {
+      "title": "SEO in 2018",
+      "body": "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan. Etiam congue interdum tincidunt. In vestibulum, tellus vitae lobortis semper, risus turpis iaculis metus, et ullamcorper arcu orci tempus ipsum. Nam ultrices ligula nec turpis pellentesque, ac placerat arcu viverra. Vivamus at velit scelerisque, accumsan nunc vel, volutpat est. Ut nec lacus sed purus faucibus fringilla. Duis ullamcorper consequat justo, in fermentum nisl blandit a. Nunc posuere dolor felis, quis interdum felis fringilla a. Integer ac efficitur ex, sit amet viverra metus. Nulla viverra quam leo, pellentesque tempus libero iaculis ac. Ut gravida dui id eros lobortis, ut bibendum diam cursus.",
+      "snippet": "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan",
+      "rating": 2
+    }
+  },
+  {
+    "model": "app.blog",
+    "pk": 2,
+    "fields": {
+      "title": "Migrating Grails 2 to 3",
+      "body": "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non. Aenean orci mi, fermentum sed libero vitae, suscipit ultrices urna. Sed iaculis pellentesque erat, a placerat lacus semper vel. Cras ornare erat neque. Suspendisse ut risus et ante vehicula iaculis. Vestibulum ultricies varius tempor. Aenean a varius massa. Praesent commodo, lectus vitae ullamcorper suscipit, felis erat fermentum justo, in molestie diam turpis a nisl. Sed et libero ac magna fermentum efficitur. Proin imperdiet molestie quam, sed vestibulum purus rhoncus in. Quisque scelerisque dui eu dui tincidunt, in ultricies neque bibendum. Proin feugiat ipsum vel tincidunt vehicula. Proin a dolor arcu.",
+      "snippet": "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non",
+      "rating": 5
+    }
+  },
+  {
+    "model": "app.blog",
+    "pk": 3,
+    "fields": {
+      "title": "Purging yourself, digitally",
+      "body": "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam. Nullam eu nisl auctor, aliquam neque non, lobortis risus. Sed sit amet dapibus orci. Curabitur eget ante ultricies, tincidunt tortor id, cursus nibh. Donec id ullamcorper dui. Cras vestibulum nisi non libero bibendum volutpat. Nullam et aliquam urna. Fusce semper accumsan dui nec sodales. Aenean imperdiet malesuada velit, in faucibus ligula rhoncus vitae. Morbi volutpat placerat odio. Nam et ligula condimentum, pellentesque lorem a, imperdiet ex. Quisque et erat id orci venenatis finibus. Duis in ultricies mi. ",
+      "snippet": "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam.",
+      "rating": 4
+    }
+  },
+  {
+    "model": "app.blog",
+    "pk": 3,
+    "fields": {
+      "title": "Software",
+      "body": "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque. Donec sodales vel ligula sit amet rhoncus. Vivamus sodales erat eget quam posuere, sit amet tristique justo luctus. Etiam efficitur turpis nec ipsum mollis vehicula. Curabitur suscipit hendrerit rhoncus. Phasellus in est et ipsum auctor fringilla sit amet quis elit. Donec quis ex ac elit malesuada luctus.",
+      "snippet": "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque",
+      "rating": 6
+    }
+  }
+]

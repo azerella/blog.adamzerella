@@ -23,7 +23,7 @@ SECRET_KEY = os.getenv('BAZ_SECRET_KEY', "abc123")
 
 DEBUG = os.getenv('BAZ_DEBUG', True)
 
-# *** SECURITY *** 
+# *** SECURITY ***
 ALLOWED_HOSTS = os.getenv('BAZ_ALLOWED_HOSTS', [])
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SESSION_COOKIE_SECURE = False
@@ -33,7 +33,7 @@ SECURE_SSL_HOST = None
 SECURE_CONTENT_TYPE_NOSNIFF = False
 SECURE_HSTS_SECONDS = 0
 SECURE_BROWSER_XSS_FILTER = False
-# **************** 
+# ****************
 
 INSTALLED_APPS = [
     'django.contrib.admin',

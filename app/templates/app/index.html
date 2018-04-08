@@ -1,37 +1,7 @@
-{% load static %}
+{% extends "./base.html" %}
 
-<!DOCTYPE html>
-<html lang="en-AU">
-    <!--[if lte IE 7]>     <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]>      <html lang="en" class="no-js"> <![endif]-->
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
-        <link rel="canonical" href="https://blog.adamzerella.com/">
-        <link rel="icon" type="image/x-icon" href="{% static 'app/favicon.ico' %}"/> 
-        <title>{{ page_title }} | Adam Zerella</title>
-        <!-- Start meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=8" />
-        <meta name="description" content="Adam Zerella's blog"/>
-        <meta name="keywords" content="Adam Zerella's blog, full-stack developer australia blog, adam zerella, australian developers blogs, software blog, australia blog"/>
-        <meta name="author" content="Adam A. Zerella"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>        
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@adamzerella" />
-        <meta name="twitter:description" content="Adam Zerella's personal blog." />
-        <meta name="twitter:title" content="Adam Zerella" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Adam Zerella" />
-        <meta property="og:title" content="Adam Zerella Blog" />
-        <meta property="og:description" content="Adam Zerella's personal blog." />
-        <!-- End meta tags -->
-    </head>
+{% block title %}Blog{% endblock %}
 
-    <body>
-        {% for blog in blogs %}
-            <h1>{{ blog.title|default:"NO TITLE" }}</h1>
-            <p>{{ blog.content|default:"NO CONTENT" }}</p>
-        {% endfor %}
-    </body>
-</html>
+{% block content %}
+<h1>index page</h1>
+{% endblock %}

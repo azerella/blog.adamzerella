@@ -1,0 +1,20 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}Archives{% endblock %}
+{% block css_file_static %}{% static 'app/stylesheets/archive.css'%}{% endblock %}
+
+{% block content %}
+    <div class="archives">
+        <h1>Random tidbits</h1>
+        <ul>
+              {% for entry in blogList %}
+                  <li>
+                      {{ entry.created_date }} </br>
+                      {{ entry.title }}
+                  </li>
+              {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
