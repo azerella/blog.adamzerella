@@ -1,0 +1,12 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}{{entry.title}}{% endblock %}
+{% block css_file_static %}{% static 'app/stylesheets/blog_entry.css'%}{% endblock %}
+
+{% block content %}
+    <div class="blog_entry">
+        <h1>{{entry.title}}</h1>
+        <p>{{entry.body}}</p>
+    </div>
+{% endblock %}

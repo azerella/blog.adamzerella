@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'app.apps.AppConfig'
 ]
 
@@ -86,7 +87,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': os.getenv('BAZ_SQL_PORT', '3306'),
         'USER': os.getenv('BAZ_SQL_USER', 'root'),
-        'PASSWORD': os.getenv('BAZ_SQL_PASS', ''),
+        'PASSWORD': os.getenv('BAZ_SQL_PASS', 'root'),
         'TIME_ZONE': 'Australia/Sydney',
         'TEST': {
             'ENGINE': 'django.db.backends.sqlite3',

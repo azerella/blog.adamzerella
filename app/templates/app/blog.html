@@ -1,15 +1,18 @@
 {% extends "./base.html" %}
 {% load static %}
 
-{% block title %}{{popular_blog_title}}{% endblock %}
+{% block title %}{{highest_rated.title}}{% endblock %}
 {% block css_file_static %}{% static 'app/stylesheets/blog.css'%}{% endblock %}
 
 {% block content %}
         <div class="blog">
             <h1>New hotness</h1>
             {% for entry in blogs %}
-                <h2>{{ entry.title }}</h2>
-                <p>{{ entry.content }}</p>
+                  <h2><a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a></h2>
             {% endfor %}
+
+            <hr/>
+            <h2>{{ highest_rated.title }}</h2>
+            <p>{{ highest_rated.body }}</p>
         </div>
 {% endblock %}

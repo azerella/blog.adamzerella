@@ -8,11 +8,11 @@
     <div class="archives">
         <h1>Random tidbits</h1>
         <ul>
-              {% for entry in blogList %}
+              {% for entry in blogs %}
                   <li>
-                      {{ entry.created_date }} </br>
+                      {{ entry.created_date }}</br>
                       {{ entry.title }}
-                  </li>
+                  </li></br>
               {% endfor %}
         </ul>
     </div>

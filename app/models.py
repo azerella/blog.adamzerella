@@ -14,6 +14,7 @@ class Blog(models.Model):
 
     title = models.CharField(max_length=100)
     body = models.TextField(blank=True)
+    slug = models.CharField(max_length=100)
     snippet = models.TextField(max_length=128, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     modified_date = models.DateTimeField(null=True)
@@ -25,4 +26,4 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         from django.urls import reverse
-        return reverse('app.views.blog_entry', args=[str(self.title)])
+        return reverse('app.views.blog_entry', args=[str(self.slug)])
