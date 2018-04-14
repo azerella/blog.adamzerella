@@ -7,7 +7,8 @@
     <!--[if gt IE 8]>      <html lang="en" class="no-js"> <![endif]-->
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'app/stylesheets/base.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% block css_file_static %}{% endblock %}" />
+
+            {% block extra_css %}{% endblock %}
 
         <link rel="canonical" href="https://blog.adamzerella.com/">
         <link rel="icon" type="image/x-icon" href="{% static 'app/favicon.ico' %}"/>
@@ -20,7 +21,7 @@
         <meta name="description" content="Adam Zerella's software blog"/>
         <meta name="keywords" content="Adam Zerella's blog, full-stack developer australia blog, adam zerella, australian developers blogs, software blog, australia blog"/>
         <meta name="author" content="Adam A. Zerella"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@adamzerella" />
         <meta name="twitter:description" content="Adam Zerella's software blog." />
@@ -31,24 +32,45 @@
         <meta property="og:description" content="Adam Zerella's software blog." />
         <!-- End meta tags -->
 
-        <script src="{% static 'app/scripts/main.js' %}"></script>
-    </head>
+        <!-- <script src="{% static 'app/scripts/main.js' %}"></script> -->
 
+        <!-- Start Google AdSense -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5402018156533225",
+            enable_page_level_ads: true
+          });
+        </script>
+        <!-- End Google AdSense -->
+
+        <!-- Start Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115475837-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-115475837-2');
+        </script>
+        <!-- End Google Analytics -->
+    </head>
     <body>
         <nav>
-            <a href="/about">About</a>
-            <a href="/blog">Blog</a>
-            <a href="/archive">Archive</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link active" href="/blog">Blog</a>
+            <a class="nav-link" href="/archive">Archive</a>
         </nav>
         <div class="sidebar">
-            <a href="{% url 'blog' %}"><div id="face"></div></a></br>
-            <div id="ad"></div>
+            <a href="{% url 'blog' %}"><div class="face"></div></a>
+            <div class="ad"></div>
         </div>
         <div id="content">
             {% block content %}{% endblock %}
         </div>
-        <footer>Adam Zerella</footer>
-
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <!-- <div class="footer">test</div> -->
+        <footer><p>blog.adamzerella.com</p></footer>
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
     </body>
+
 </html>

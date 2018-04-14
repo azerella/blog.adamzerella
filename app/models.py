@@ -27,3 +27,7 @@ class Blog(models.Model):
     def get_absolute_url(self):
         from django.urls import reverse
         return reverse('app.views.blog_entry', args=[str(self.slug)])
+
+
+class Subscriber(models.Model):
+    username = models.EmailField()

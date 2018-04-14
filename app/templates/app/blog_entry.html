@@ -2,11 +2,23 @@
 {% load static %}
 
 {% block title %}{{entry.title}}{% endblock %}
-{% block css_file_static %}{% static 'app/stylesheets/blog_entry.css'%}{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/blog_entry.css'%}/>
+{% endblock extra_css %}
 
 {% block content %}
     <div class="blog_entry">
-        <h1>{{entry.title}}</h1>
-        <p>{{entry.body}}</p>
-    </div>
+        <h1>{{ entry.title }}</h1>
+        {{ entry.created_date|date:"l jS M\, Y" }}</br></br>
+        {{ entry.body|safe }}
+    </div></br>
+
+    <!-- <div class="feedback" style="margin-top:5em; margin: 0 auto">
+        <h1 >FEEDBACK FORM</h1>
+        <form action="/your-name/" method="post">
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </div> -->
+</form>
 {% endblock %}

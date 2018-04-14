@@ -1,3 +1,14 @@
+## 0.0.3
+*   Tested viability of Bootstrap4, concluded no need.
+*   `base.html` CSS layout correction
+*   Added `<code>...</code>` blocks with css styling
+*   Added `Subscriber` model to `models.py`
+*   `Archive.html` entries colour is reflective of the rating (darker == less)
+*   Implemented two column layouts for `blog.html` and `archive.html`
+*   Added Google Analytics & Google AdSense snippets to `base.html`
+*   Various CSS tweaks, mostly `<a>` and layout related
+*   Modified footer content to `blog.adamzerella.com`, placeholder for now
+---
 ## 0.0.2
 *   Restructured static asset directories.
 *   Created `base.html` template for all pages.
@@ -24,6 +35,8 @@
 *   Modified face redirect now goes to `blog.html` page (default)
 *   Added `Max` package to `views.py`
 *   `Sidebar #ad` is now transparent
+
+---
 ## 0.0.1
 *   Created `index.html` page with relevant meta info.
 *   Created `Blog` and `Author` models, applied migrations accordingly.

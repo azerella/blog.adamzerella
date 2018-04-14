@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block title %}About{% endblock %}
-{% block css_file_static %}{% static 'app/stylesheets/about.css'%}{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/about.css'%}/>
+{% endblock %}
 
 {% block content %}
 <div class="about">
