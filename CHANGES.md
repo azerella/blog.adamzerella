@@ -8,6 +8,7 @@
 *   Added Google Analytics & Google AdSense snippets to `base.html`
 *   Various CSS tweaks, mostly `<a>` and layout related
 *   Modified footer content to `blog.adamzerella.com`, placeholder for now
+*   Modified `.travis.yml`
 ---
 ## 0.0.2
 *   Restructured static asset directories.

@@ -4,25 +4,34 @@ language: python
 python:
   - "3.6"
 
+dist: trusty
+sudo: enabled
+
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
 
 services:
   - mysql
 
 
 before_install:
+  - pip install Django
+  - pip install mysqlclient
+  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD($BAZ_SQL_PASS) where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql_upgrade
+  - sudo service mysql restart
   - mysql -e 'CREATE DATABASE IF NOT EXISTS blogadamzerella;'
 
 
-test:
-  adapter: mysql2
-  database: blogadamzerella
-  username: root
-  encoding: utf8
-
-
 install:
-  - pip install Django
-  - pip install mysqlclient
+  - python manage.py migrate
+  - python manage.py loaddata
+
 
 script:
   - python -Wall manage.py test app
