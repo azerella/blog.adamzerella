@@ -30,4 +30,7 @@ class Blog(models.Model):
 
 
 class Subscriber(models.Model):
-    username = models.EmailField()
+    username = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.username

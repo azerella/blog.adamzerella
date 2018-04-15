@@ -1,38 +1,13 @@
 ul {
-  display: inline;
-}
-li{
-  list-style: none;
+    display: inline;
 }
 
-li a{
-    font-size: 16px;
-    color: #dede4d;
-    margin-right: 1.5em;
-    text-decoration: none;
+li {
+    list-style: none;
 }
 
-li a:hover {
-    color: #dede4d;
-    padding-bottom:1px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
-
-li a:visited {
-    color: #b7cacc;
-    background-color: yellow;
-    border-bottom-color: #dede4d;
-    /*Unable to style a:visited links due to security concerns:
-    https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
-    */
-}
-
-li a:active {
-    color: #b7cacc;
-    padding-bottom: 6px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+.column a {
+    padding-bottom: 1px;
 }
 
 .row:after {

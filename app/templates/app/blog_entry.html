@@ -12,13 +12,12 @@
         {{ entry.created_date|date:"l jS M\, Y" }}</br></br>
         {{ entry.body|safe }}
     </div></br>
+    <div id="hr"></div></br>
 
-    <!-- <div class="feedback" style="margin-top:5em; margin: 0 auto">
-        <h1 >FEEDBACK FORM</h1>
+    <div class="feedback" >
         <form action="/your-name/" method="post">
-        <label for="your_name">Your name: </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-        <input type="submit" value="OK">
-    </div> -->
+        <textarea rows="4" cols="50" placeholder="... "></textarea></br>
+        <input type="submit" value="Comment">
+    </div>
 </form>
 {% endblock %}

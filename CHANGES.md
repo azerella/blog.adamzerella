@@ -9,6 +9,15 @@
 *   Various CSS tweaks, mostly `<a>` and layout related
 *   Modified footer content to `blog.adamzerella.com`, placeholder for now
 *   Modified `.travis.yml`
+*   Added `Connect` and `Site` headings to footer.
+*   Implemented first version of email subscription form
+*   Tweaked CSS global colour scheme
+*   Added CSS styling to forms `input` `submit` types
+*   Added `Sitemap` and `Source Code` links in footer
+*   Added incomplete comment section to all `blog_entry` pages
+*   Archive page `Random tidbits` heading colour is now related to rating
+*   Added fixture data for `Subscriber` model, updated `README`
+*   Refactored all stylesheets, reduced clutter, dupes etc
 ---
 ## 0.0.2
 *   Restructured static asset directories.

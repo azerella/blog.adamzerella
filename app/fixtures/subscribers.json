@@ -1,0 +1,23 @@
+[
+    {
+      "model": "app.subscriber",
+      "pk": 1,
+      "fields": {
+        "username": "steve@test.com"
+      }
+    },
+    {
+      "model": "app.subscriber",
+      "pk": 2,
+      "fields": {
+        "username": "bob@test.com"
+      }
+    },
+    {
+      "model": "app.subscriber",
+      "pk": 3,
+      "fields": {
+        "username": "billy@test.com"
+      }
+    }
+]

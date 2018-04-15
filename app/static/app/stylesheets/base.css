@@ -16,31 +16,15 @@
 html {
   background-color: #061619;
   min-width: 368px;
-  height: 100%;
   font-family: system;
-  padding: -bottom: 64px;
 }
 
 body {
   height: 100%;
+  margin: 0px auto;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 64px;
-  color: #b7cacc;
-  text-align: left;
-  background-color: #051215;
-  border-top: 1px solid #144952;
-  padding: 15px;
-  
-}
-
-nav {
+body > nav {
     color: #dede4d;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -48,21 +32,24 @@ nav {
     width: 100%;
 }
 
-nav a{
-    font-size: 16px;
+a {
     color: #dede4d;
     margin-right: 1.5em;
     text-decoration: none;
 }
 
-nav a:hover {
+strong {
+    color: white;
+}
+
+a:hover {
     color: #dede4d;
     padding-bottom: 6px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
 
-nav a:visited {
+a:visited {
     color: #b7cacc;
     background-color: yellow;
     border-bottom-color: #dede4d;
@@ -71,18 +58,49 @@ nav a:visited {
     */
 }
 
-nav a:active {
+a:active {
     color: #b7cacc;
     padding-bottom: 6px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
 
-.wrapper {
-  display: block;
+.sidebar > a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border-style: none;
 }
 
-.sidebar {
+body > footer {
+  display: inline-flex;
+  left: 0;
+  right: 5;
+  bottom: 0;
+  width: 100%;
+  min-width:100%;
+  max-width:100%;
+  margin:0px;
+  padding:0px;
+  height:auto;
+  color: #b7cacc;
+  text-align: left;
+  background-color: #021013;
+  border-top: 1px solid #144952;
+}
+
+footer > .footer-col {
+  float: left;
+  width: 100%;
+  padding: 1em;
+  border-right: 1px solid #144952;
+}
+
+footer > .footer-col > p {
+  line-height: 0.8;
+}
+
+body > .sidebar {
   border-right: 1px solid #144952;
   margin-right: 1em;
   padding: 1em;
@@ -100,7 +118,13 @@ nav a:active {
 
 }
 
-.face{
+body > #content {
+  color:#b7cacc;
+  padding: 5px;
+  height: 100%;
+}
+
+.sidebar > a > .face {
   background-image: url('../images/face256.png');
   background-size: 128px 128px;
   width: 128px;
@@ -108,35 +132,73 @@ nav a:active {
   margin-bottom: 1em;
 }
 
-.ad{
+.sidebar > .ad {
   background-color: transparent;
   border: 1px solid #144952;
   width: 128px;
   height: 512px;
 }
 
-#content {
-  color:#b7cacc;
-  padding: 5px;
-  height: 100%;
+code {
+    color: #dede4d;
 }
 
-#myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+form > input[type=text] {
+    background-color: #132639;
+    border: none;
+    color: #b7cacc;
+    height: 23px;
+    padding: 5px;
 }
 
-#myBtn:hover {
-  background-color: #555;
+form > input[type=email] {
+    background-color: #132639;
+    border: 1px solid #144952;
+
+    color: #b7cacc;
+    height: 23px;
+    padding: 5px;
+}
+
+form > input::placeholder {
+    color: #b7cacc;
+}
+
+form > input[type=submit] {
+    background-color: #132639;
+    border: 1px solid #144952;
+    width: 72px;
+    height: 32px;
+    color: #b7cacc;
+    border-radius: 4px;
+}
+
+form > textarea {
+    background-color: #132639;
+    border: 1px solid #144952;
+    color: #b7cacc;
+    max-width: 768px;
+    padding: 15px;
+    resize: both;
+    font-size: 16px;
+}
+
+#code-wrapper{
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 768px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #132639;
+    clear: both;
+    border: 1px solid #144952;
+
+    @media (max-width: 767px) {
+  			padding: 15px;
+  	}
+}
+
+#hr {
+  border-top: 1px solid #144952;
+  display:flex;
 }
