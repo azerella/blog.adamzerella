@@ -14,10 +14,12 @@
     </div></br>
     <div id="hr"></div></br>
 
-    <div class="feedback" >
-        <form action="/your-name/" method="post">
-        <textarea rows="4" cols="50" placeholder="... "></textarea></br>
-        <input type="submit" value="Comment">
+    <div class="feedback">
+        <form action="" method="post">
+            {% csrf_token %}
+            <textarea rows="4" cols="50" placeholder="... "></textarea></br>
+            <input type="submit" value="Comment">
+        </form>
     </div>
 </form>
 {% endblock %}

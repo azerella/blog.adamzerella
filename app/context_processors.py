@@ -1,6 +1,4 @@
 from .forms import SignupForm
 
 def signup_form(request):
-    return {
-         'signup_form' : SignupForm()
-    }
+    return {'signup_form' : SignupForm()}

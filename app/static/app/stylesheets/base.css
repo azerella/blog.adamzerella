@@ -154,7 +154,22 @@ form > input[type=text] {
 form > input[type=email] {
     background-color: #132639;
     border: 1px solid #144952;
+    color: #b7cacc;
+    height: 23px;
+    padding: 5px;
+}
 
+form > input[type=email] > .valid_form {
+    background-color: lime;
+    border: 1px solid #144952;
+    color: #b7cacc;
+    height: 23px;
+    padding: 5px;
+}
+
+form > input[type=email] > .invalid_form {
+    background-color: red;
+    border: 1px solid #144952;
     color: #b7cacc;
     height: 23px;
     padding: 5px;

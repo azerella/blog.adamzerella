@@ -42,5 +42,38 @@
       "snippet": "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque",
       "rating": 6
     }
+  },
+  {
+    "model": "app.blog",
+    "pk": 5,
+    "fields": {
+      "title": "Microsoft MDT for dummies",
+      "body": "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet. Sed vel cursus elit. Quisque nec dapibus nisl, ut facilisis mi. Vestibulum eget dui vestibulum, vehicula elit eget, rutrum leo. Duis lobortis nisl dolor. Nulla at placerat lorem, nec auctor libero.",
+      "slug": "microsoft-mdt-for-dummies",
+      "snippet": "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet",
+      "rating": 15
+    }
+  },
+  {
+    "model": "app.blog",
+    "pk": 6,
+    "fields": {
+      "title": "GitHub Markdown Language List",
+      "body": "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus. Suspendisse ultrices commodo interdum. Duis dictum sem quis nisi tincidunt maximus. Mauris ultrices eros ac augue pellentesque tincidunt. Integer facilisis libero ac erat varius porta. Donec ac tellus fringilla, pulvinar lacus ac, pulvinar justo. Pellentesque vulputate hendrerit viverra. Donec sit amet aliquet lorem, nec luctus arcu. Praesent laoreet aliquet iaculis.",
+      "slug": "github-markdown-language-list",
+      "snippet": "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus",
+      "rating": 36
+    }
+  },
+  {
+    "model": "app.blog",
+    "pk": 7,
+    "fields": {
+      "title": "AdBlock for your router",
+      "body": "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu. Donec vel erat quis turpis consequat porta. Suspendisse pharetra mauris dui, eget aliquet velit efficitur non. Aliquam mi velit, vulputate quis maximus at, ultricies eu sem. Aenean accumsan leo vel efficitur posuere. Cras blandit dolor a ipsum condimentum lacinia eu sed velit. Fusce vel magna libero. Donec ac commodo purus.",
+      "slug": "software-software-software",
+      "snippet": "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu",
+      "rating": 24
+    }
   }
 ]

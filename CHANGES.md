@@ -1,3 +1,14 @@
+## 0.0.4
+*   Added extra `blog` and `subscriber` fixture data.
+*   Added `jquery-3.3.1-min` to `base.html` for the email form.
+*   Added basic validation to `forms.py` `clean_username()` method.
+*   Added `CommentForm` placeholder for further implementation.
+*   Added AJAX / JQuery code to `main.js` to handle email form POST request,
+    with validation of `csrftoken`
+*   Added CSS style to email form `.valid_form` and `.invalid_form` class
+*   Tweaked colour brightness based on rating for `archive.html`
+
+---
 ## 0.0.3
 *   Tested viability of Bootstrap4, concluded no need.
 *   `base.html` CSS layout correction
@@ -18,6 +29,7 @@
 *   Archive page `Random tidbits` heading colour is now related to rating
 *   Added fixture data for `Subscriber` model, updated `README`
 *   Refactored all stylesheets, reduced clutter, dupes etc
+
 ---
 ## 0.0.2
 *   Restructured static asset directories.

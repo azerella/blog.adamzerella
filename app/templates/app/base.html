@@ -7,6 +7,7 @@
     <!--[if gt IE 8]>      <html lang="en" class="no-js"> <![endif]-->
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'app/stylesheets/base.css' %}" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
             {% block extra_css %}{% endblock %}
 
@@ -72,11 +73,12 @@
         <footer>
             <div class="footer-col" style="width: 80%">
               <h2>Connect</h2>
-              <form action="/register_subscriber/" method="POST">
+              <form action='' id='signup_form' method="POST">
                   {% csrf_token %}
                   {{ signup_form }}
                   <input type="submit" name="submit" value="Submit"/>
               </form>
+
             </div>
             <div class="footer-col" style="width: 20%">
                 <h2>Site</h2>
@@ -86,5 +88,6 @@
                 </p>
             </div>
         </footer>
+        <script type='text/javascript' src="{% static 'app/scripts/main.js' %}"></script>
     </body>
 </html>

@@ -13,8 +13,7 @@
               {% for entry in blogs %}
               <div class="column">
                   <li>
-                      <!-- <a style="font-size: {% widthratio entry.rating 6 1 %}px "  -->
-                      <a style="color: rgb(6,{% widthratio entry.rating 4 5 %},128)"
+                      <a style="color: rgb(6,{% widthratio entry.rating 2 12 %},128)"
                       href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a></br>
                       {{ entry.created_date|date:"l jS M\, Y" }}
                   </li></br>
@@ -22,7 +21,6 @@
               {% empty %}
               <h2>Sorry, no blogs here yet :(</h2>
               {% endfor %}
-
         </ul>
       </div>
     </div>
