@@ -1,10 +1,8 @@
-from django.core.exceptions import ValidationError
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, get_object_or_404
-from django.template import Context
 
 from .forms import SignupForm
-from .models import Blog, Subscriber
+from .models import Blog
 
 
 """
@@ -23,7 +21,6 @@ def blog(request):
         "blogs": Blog.objects.all(),
         "highest_rated": Blog.objects.all().order_by('-rating').first()
     }
-
     return render(request, 'app/blog.html', context)
 
 
@@ -37,7 +34,7 @@ def blog_entry(request, slug):
     }
 
     #   Increment rating on page view
-    entry.rating +=1
+    entry.rating += 1
     #   Write updated rating to DB
     entry.save()
 
@@ -71,7 +68,6 @@ def register_subscriber(request):
         if form.is_valid():
             print('[SUCCESS] : New sub: %s' % form.data['username'])
             return HttpResponse('')
-        else:
-            print('[FAIL] : Invalid sub: %s' % form.data['username'])
-            return HttpResponseBadRequest('')
-    return render(request, 'app/blog.html', {})
+        print('[FAIL] : Invalid sub: %s' % form.data['username'])
+        return HttpResponseBadRequest('')
+        

@@ -21,7 +21,7 @@ class BaseSitemap(Sitemap):
     def items(self):
         return [
             "",         #Root ('index.html')
-            "/about",   
+            "/about",
             "/blog",
             "/archive"
         ]

@@ -5,18 +5,18 @@ from .models import Subscriber
 
 class SignupForm(forms.Form):
     username = forms.EmailField(
-            label=False,
-            widget=forms.EmailInput(
-                attrs={'placeholder':'email'}
-            ),
-            max_length=80)
+        label=False,
+        widget=forms.EmailInput(
+            attrs={'placeholder':'email'}
+        ),
+        max_length=80)
 
     def clean_username(self):
         data = self.cleaned_data['username']
 
-        if Subscriber.objects.filter( username = data ).exists():
-            raise forms.ValidationError( "Subscriber: %s exists!" % data )
-        Subscriber.objects.create( username = data )
+        if Subscriber.objects.filter(username=data).exists():
+            raise forms.ValidationError("Subscriber: %s exists!" % data)
+        Subscriber.objects.create(username=data)
 
         return data
 
