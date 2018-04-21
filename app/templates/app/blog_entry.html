@@ -1,25 +1,21 @@
-{% extends "./base.html" %}
-{% load static %}
+{% extends "./base.html" %} {% load static %} {% block title %}{{entry.title}}{% endblock %} {% block content %}
+<div class="blog_entry">
+    <h1>{{ entry.title }}</h1>
+    {{ entry.created_date|date:"l jS M\, Y" }}</br>
+    </br>
+    {{ entry.body|safe }}
+</div>
+</br>
+<div id="hr"></div>
+</br>
 
-{% block title %}{{entry.title}}{% endblock %}
-{% block extra_css %}
-    <link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/blog_entry.css'%}/>
-{% endblock extra_css %}
-
-{% block content %}
-    <div class="blog_entry">
-        <h1>{{ entry.title }}</h1>
-        {{ entry.created_date|date:"l jS M\, Y" }}</br></br>
-        {{ entry.body|safe }}
-    </div></br>
-    <div id="hr"></div></br>
-
-    <div class="feedback">
-        <form action="" method="post">
-            {% csrf_token %}
-            <textarea rows="4" cols="50" placeholder="... "></textarea></br>
-            <input type="submit" value="Comment">
-        </form>
-    </div>
+<div class="feedback">
+    <form action="" method="post">
+        {% csrf_token %}
+        <textarea rows="4" cols="50" placeholder="... "></textarea>
+        </br>
+        <input type="submit" value="Comment">
+    </form>
+</div>
 </form>
 {% endblock %}

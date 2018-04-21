@@ -31,6 +31,7 @@ class Blog(models.Model):
 
 class Subscriber(models.Model):
     username = models.EmailField(unique=True)
+    created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.username

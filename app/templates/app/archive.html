@@ -1,28 +1,23 @@
-{% extends "./base.html" %}
-{% load static %}
-
-{% block title %}Archives{% endblock %}
-{% block extra_css %}
-    <link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/archive.css'%}/>
-{% endblock %}
-{% block content %}
-    <div class="archives">
-      <div class="row">
+{% extends "./base.html" %} {% load static %} {% block title %}Archives{% endblock %} {% block extra_css %}
+<link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/archive.css'%}/> {% endblock %} {% block content %}
+<div class="archives">
+    <div class="row">
         <h1>Random tidbits</h1>
         <ul>
-              {% for entry in blogs %}
-              <div class="column">
-                  <li>
-                      <a style="color: rgb(6,{% widthratio entry.rating 2 12 %},128)"
-                      href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a></br>
-                      {{ entry.created_date|date:"l jS M\, Y" }}
-                  </li></br>
-              </div>
-              {% empty %}
-              <h2>Sorry, no blogs here yet :(</h2>
-              {% endfor %}
+            {% for entry in blogs %}
+            <div class="column">
+                <li>
+                    <a style="color: rgb(6,{% widthratio entry.rating 2 12 %},128)" href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
+                    </br>
+                    {{ entry.created_date|date:"l jS M\, Y" }}
+                </li>
+                </br>
+            </div>
+            {% empty %}
+            <h2>Sorry, no blogs here yet :(</h2>
+            {% endfor %}
         </ul>
-      </div>
     </div>
+</div>
 
 {% endblock %}

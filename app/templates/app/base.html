@@ -2,80 +2,86 @@
 
 <!DOCTYPE html>
 <html lang="en-AU">
-    <!--[if lte IE 7]>     <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]>      <html lang="en" class="no-js"> <![endif]-->
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'app/stylesheets/base.css' %}" />
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--[if lte IE 7]>     <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html lang="en" class="no-js"> <![endif]-->
 
-            {% block extra_css %}{% endblock %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/stylesheets/base.css' %}" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> {% block extra_css %}{% endblock %}
 
-        <link rel="canonical" href="https://blog.adamzerella.com/">
-        <link rel="icon" type="image/x-icon" href="{% static 'app/favicon.ico' %}"/>
+    <link rel="canonical" href="https://blog.adamzerella.com/">
+    <link rel="icon" type="image/x-icon" href="{% static 'app/favicon.ico' %}" />
 
-        <title>{% block title %}{% endblock %} | Adam Zerella</title>
+    <title>{% block title %}{% endblock %} | Adam Zerella</title>
 
-        <!-- Start meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Adam Zerella's software blog"/>
-        <meta name="keywords" content="Adam Zerella's blog, full-stack developer australia blog, adam zerella, australian developers blogs, software blog, australia blog"/>
-        <meta name="author" content="Adam A. Zerella"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@adamzerella" />
-        <meta name="twitter:description" content="Adam Zerella's software blog." />
-        <meta name="twitter:title" content="Adam Zerella" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Adam Zerella" />
-        <meta property="og:title" content="Adam Zerella Blog" />
-        <meta property="og:description" content="Adam Zerella's software blog." />
-        <!-- End meta tags -->
+    <!-- Start meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Adam Zerella's software blog" />
+    <meta name="keywords" content="Adam Zerella's blog, full-stack developer australia blog, adam zerella, australian developers blogs, software blog, australia blog"
+    />
+    <meta name="author" content="Adam A. Zerella" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@adamzerella" />
+    <meta name="twitter:description" content="Adam Zerella's software blog." />
+    <meta name="twitter:title" content="Adam Zerella" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Adam Zerella" />
+    <meta property="og:title" content="Adam Zerella Blog" />
+    <meta property="og:description" content="Adam Zerella's software blog." />
+    <!-- End meta tags -->
 
-        <!-- Start Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115475837-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <!-- Start Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115475837-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-          gtag('config', 'UA-115475837-2');
-        </script>
-        <!-- End Google Analytics -->
-    </head>
-    <body>
-        <nav>
-            <a class="nav-link" href="/about">About</a>
-            <a class="nav-link active" href="/blog">Blog</a>
-            <a class="nav-link" href="/archive">Archive</a>
-        </nav>
-        <div class="sidebar">
-            <a href="{% url 'blog' %}"><div class="face"></div></a>
-            <!-- <div class="ad"></div> -->
+        gtag('config', 'UA-115475837-2');
+    </script>
+    <!-- End Google Analytics -->
+</head>
+
+<body>
+    <nav>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link active" href="/blog">Blog</a>
+        <a class="nav-link" href="/archive">Archive</a>
+    </nav>
+    <div class="sidebar">
+        <a href="{% url 'blog' %}">
+            <div class="face"></div>
+        </a>
+        <!-- <div class="ad"></div> -->
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="footer-col" style="width: 75%">
+            <h2>Connect</h2>
+            <form action='' id='signup_form' method="POST">
+                {% csrf_token %} {{ signup_form }}
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+
         </div>
-        <div id="content">
-            {% block content %}{% endblock %}
+        <div class="footer-col" style="width: 25%">
+            <h2>Site</h2>
+            <p>
+                <a href="https://github.com/adamzerella/blog.adamzerella">Source Code</a>
+                </br>
+                </br>
+                </br>
+                <a href="http://127.0.0.1:8000/sitemap.xml/">Sitemap</a>
+            </p>
         </div>
+    </footer>
+    <script type='text/javascript' src="{% static 'app/scripts/main.js' %}"></script>
+</body>
 
-        <footer>
-            <div class="footer-col" style="width: 80%">
-              <h2>Connect</h2>
-              <form action='' id='signup_form' method="POST">
-                  {% csrf_token %}
-                  {{ signup_form }}
-                  <input type="submit" name="submit" value="Submit"/>
-              </form>
-
-            </div>
-            <div class="footer-col" style="width: 20%">
-                <h2>Site</h2>
-                <p>
-                  <a href="https://github.com/adamzerella/blog.adamzerella">Source Code</a> </br></br></br>
-                  <a href="http://127.0.0.1:8000/sitemap.xml/">Sitemap</a>
-                </p>
-            </div>
-        </footer>
-        <script type='text/javascript' src="{% static 'app/scripts/main.js' %}"></script>
-    </body>
 </html>

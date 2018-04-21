@@ -1,79 +1,93 @@
 [
-  {
-    "model": "app.blog",
-    "pk": 1,
-    "fields": {
-      "title": "SEO in 2018",
-      "body": "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan. Etiam congue interdum tincidunt. In vestibulum, tellus vitae lobortis semper, risus turpis iaculis metus, et ullamcorper arcu orci tempus ipsum. Nam ultrices ligula nec turpis pellentesque, ac placerat arcu viverra. Vivamus at velit scelerisque, accumsan nunc vel, volutpat est. Ut nec lacus sed purus faucibus fringilla. Duis ullamcorper consequat justo, in fermentum nisl blandit a. Nunc posuere dolor felis, quis interdum felis fringilla a. Integer ac efficitur ex, sit amet viverra metus. Nulla viverra quam leo, pellentesque tempus libero iaculis ac. Ut gravida dui id eros lobortis, ut bibendum diam cursus.",
-      "slug": "seo-in-2018",
-      "snippet": "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan",
-      "rating": 2
+    {
+        "model": "app.blog",
+        "pk": 1,
+        "fields": {
+            "title": "SEO in 2018",
+            "body":
+                "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan. Etiam congue interdum tincidunt. In vestibulum, tellus vitae lobortis semper, risus turpis iaculis metus, et ullamcorper arcu orci tempus ipsum. Nam ultrices ligula nec turpis pellentesque, ac placerat arcu viverra. Vivamus at velit scelerisque, accumsan nunc vel, volutpat est. Ut nec lacus sed purus faucibus fringilla. Duis ullamcorper consequat justo, in fermentum nisl blandit a. Nunc posuere dolor felis, quis interdum felis fringilla a. Integer ac efficitur ex, sit amet viverra metus. Nulla viverra quam leo, pellentesque tempus libero iaculis ac. Ut gravida dui id eros lobortis, ut bibendum diam cursus.",
+            "slug": "seo-in-2018",
+            "snippet":
+                "Nam dictum tristique erat vel ultrices. Aliquam erat volutpat. Praesent pellentesque rutrum accumsan",
+            "rating": 2
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 2,
+        "fields": {
+            "title": "Migrating Grails 2 to 3",
+            "body":
+                "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non. Aenean orci mi, fermentum sed libero vitae, suscipit ultrices urna. Sed iaculis pellentesque erat, a placerat lacus semper vel. Cras ornare erat neque. Suspendisse ut risus et ante vehicula iaculis. Vestibulum ultricies varius tempor. Aenean a varius massa. Praesent commodo, lectus vitae ullamcorper suscipit, felis erat fermentum justo, in molestie diam turpis a nisl. Sed et libero ac magna fermentum efficitur. Proin imperdiet molestie quam, sed vestibulum purus rhoncus in. Quisque scelerisque dui eu dui tincidunt, in ultricies neque bibendum. Proin feugiat ipsum vel tincidunt vehicula. Proin a dolor arcu.",
+            "slug": "migrating-grails-2-to-3",
+            "snippet":
+                "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non",
+            "rating": 5
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 3,
+        "fields": {
+            "title": "Purging yourself, digitally",
+            "body":
+                "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam. Nullam eu nisl auctor, aliquam neque non, lobortis risus. Sed sit amet dapibus orci. Curabitur eget ante ultricies, tincidunt tortor id, cursus nibh. Donec id ullamcorper dui. Cras vestibulum nisi non libero bibendum volutpat. Nullam et aliquam urna. Fusce semper accumsan dui nec sodales. Aenean imperdiet malesuada velit, in faucibus ligula rhoncus vitae. Morbi volutpat placerat odio. Nam et ligula condimentum, pellentesque lorem a, imperdiet ex. Quisque et erat id orci venenatis finibus. Duis in ultricies mi. ",
+            "slug": "purging-yourself-digitally",
+            "snippet":
+                "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam.",
+            "rating": 4
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 4,
+        "fields": {
+            "title": "Software software software",
+            "body":
+                "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque. Donec sodales vel ligula sit amet rhoncus. Vivamus sodales erat eget quam posuere, sit amet tristique justo luctus. Etiam efficitur turpis nec ipsum mollis vehicula. Curabitur suscipit hendrerit rhoncus. Phasellus in est et ipsum auctor fringilla sit amet quis elit. Donec quis ex ac elit malesuada luctus.",
+            "slug": "software-software-software",
+            "snippet":
+                "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque",
+            "rating": 6
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 5,
+        "fields": {
+            "title": "Microsoft MDT for dummies",
+            "body":
+                "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet. Sed vel cursus elit. Quisque nec dapibus nisl, ut facilisis mi. Vestibulum eget dui vestibulum, vehicula elit eget, rutrum leo. Duis lobortis nisl dolor. Nulla at placerat lorem, nec auctor libero.",
+            "slug": "microsoft-mdt-for-dummies",
+            "snippet":
+                "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet",
+            "rating": 15
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 6,
+        "fields": {
+            "title": "GitHub Markdown Language List",
+            "body":
+                "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus. Suspendisse ultrices commodo interdum. Duis dictum sem quis nisi tincidunt maximus. Mauris ultrices eros ac augue pellentesque tincidunt. Integer facilisis libero ac erat varius porta. Donec ac tellus fringilla, pulvinar lacus ac, pulvinar justo. Pellentesque vulputate hendrerit viverra. Donec sit amet aliquet lorem, nec luctus arcu. Praesent laoreet aliquet iaculis.",
+            "slug": "github-markdown-language-list",
+            "snippet":
+                "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus",
+            "rating": 36
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 7,
+        "fields": {
+            "title": "AdBlock for your router",
+            "body":
+                "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu. Donec vel erat quis turpis consequat porta. Suspendisse pharetra mauris dui, eget aliquet velit efficitur non. Aliquam mi velit, vulputate quis maximus at, ultricies eu sem. Aenean accumsan leo vel efficitur posuere. Cras blandit dolor a ipsum condimentum lacinia eu sed velit. Fusce vel magna libero. Donec ac commodo purus.",
+            "slug": "software-software-software",
+            "snippet":
+                "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu",
+            "rating": 24
+        }
     }
-  },
-  {
-    "model": "app.blog",
-    "pk": 2,
-    "fields": {
-      "title": "Migrating Grails 2 to 3",
-      "body": "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non. Aenean orci mi, fermentum sed libero vitae, suscipit ultrices urna. Sed iaculis pellentesque erat, a placerat lacus semper vel. Cras ornare erat neque. Suspendisse ut risus et ante vehicula iaculis. Vestibulum ultricies varius tempor. Aenean a varius massa. Praesent commodo, lectus vitae ullamcorper suscipit, felis erat fermentum justo, in molestie diam turpis a nisl. Sed et libero ac magna fermentum efficitur. Proin imperdiet molestie quam, sed vestibulum purus rhoncus in. Quisque scelerisque dui eu dui tincidunt, in ultricies neque bibendum. Proin feugiat ipsum vel tincidunt vehicula. Proin a dolor arcu.",
-      "slug": "migrating-grails-2-to-3",
-      "snippet": "Quisque sit amet luctus felis, vel finibus magna. Vestibulum blandit lacinia elit, nec congue urna semper non",
-      "rating": 5
-    }
-  },
-  {
-    "model": "app.blog",
-    "pk": 3,
-    "fields": {
-      "title": "Purging yourself, digitally",
-      "body": "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam. Nullam eu nisl auctor, aliquam neque non, lobortis risus. Sed sit amet dapibus orci. Curabitur eget ante ultricies, tincidunt tortor id, cursus nibh. Donec id ullamcorper dui. Cras vestibulum nisi non libero bibendum volutpat. Nullam et aliquam urna. Fusce semper accumsan dui nec sodales. Aenean imperdiet malesuada velit, in faucibus ligula rhoncus vitae. Morbi volutpat placerat odio. Nam et ligula condimentum, pellentesque lorem a, imperdiet ex. Quisque et erat id orci venenatis finibus. Duis in ultricies mi. ",
-      "slug": "purging-yourself-digitally",
-      "snippet": "Suspendisse auctor orci vitae porttitor ultrices. Donec dignissim nunc ex, ac scelerisque eros interdum at. Ut non velit viverra, condimentum metus non, sodales diam.",
-      "rating": 4
-    }
-  },
-  {
-    "model": "app.blog",
-    "pk": 4,
-    "fields": {
-      "title": "Software software software",
-      "body": "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque. Donec sodales vel ligula sit amet rhoncus. Vivamus sodales erat eget quam posuere, sit amet tristique justo luctus. Etiam efficitur turpis nec ipsum mollis vehicula. Curabitur suscipit hendrerit rhoncus. Phasellus in est et ipsum auctor fringilla sit amet quis elit. Donec quis ex ac elit malesuada luctus.",
-      "slug": "software-software-software",
-      "snippet": "Vivamus mollis maximus dolor, sed congue tortor tincidunt at. Ut dolor magna, maximus quis arcu in, fermentum molestie neque",
-      "rating": 6
-    }
-  },
-  {
-    "model": "app.blog",
-    "pk": 5,
-    "fields": {
-      "title": "Microsoft MDT for dummies",
-      "body": "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet. Sed vel cursus elit. Quisque nec dapibus nisl, ut facilisis mi. Vestibulum eget dui vestibulum, vehicula elit eget, rutrum leo. Duis lobortis nisl dolor. Nulla at placerat lorem, nec auctor libero.",
-      "slug": "microsoft-mdt-for-dummies",
-      "snippet": "Nullam imperdiet, nunc vel commodo lacinia, dui tortor tincidunt risus, vel auctor magna tellus quis nibh. Nam placerat auctor sapien sit amet laoreet",
-      "rating": 15
-    }
-  },
-  {
-    "model": "app.blog",
-    "pk": 6,
-    "fields": {
-      "title": "GitHub Markdown Language List",
-      "body": "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus. Suspendisse ultrices commodo interdum. Duis dictum sem quis nisi tincidunt maximus. Mauris ultrices eros ac augue pellentesque tincidunt. Integer facilisis libero ac erat varius porta. Donec ac tellus fringilla, pulvinar lacus ac, pulvinar justo. Pellentesque vulputate hendrerit viverra. Donec sit amet aliquet lorem, nec luctus arcu. Praesent laoreet aliquet iaculis.",
-      "slug": "github-markdown-language-list",
-      "snippet": "Donec eu viverra lacus. Nullam neque ante, rutrum id purus eu, porttitor suscipit tellus",
-      "rating": 36
-    }
-  },
-  {
-    "model": "app.blog",
-    "pk": 7,
-    "fields": {
-      "title": "AdBlock for your router",
-      "body": "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu. Donec vel erat quis turpis consequat porta. Suspendisse pharetra mauris dui, eget aliquet velit efficitur non. Aliquam mi velit, vulputate quis maximus at, ultricies eu sem. Aenean accumsan leo vel efficitur posuere. Cras blandit dolor a ipsum condimentum lacinia eu sed velit. Fusce vel magna libero. Donec ac commodo purus.",
-      "slug": "software-software-software",
-      "snippet": "Pellentesque a elit lobortis, faucibus elit vitae, vulputate magna. Sed vitae vehicula arcu",
-      "rating": 24
-    }
-  }
 ]

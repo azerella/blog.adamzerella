@@ -1,29 +1,22 @@
-{% extends "./base.html" %}
-{% load static %}
-
-{% block title %}{{highest_rated.title}}{% endblock %}
-{% block extra_css %}
-    <link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/blog.css'%}/>
-{% endblock %}
-
-{% block content %}
-        <div class="blog">
-            <h1>New hotness</h1>
-            <div class="container">
-            <div class="row">
-                    {% for entry in blogs %}
-                        {% if forloop.counter <= 5 %}
-                        <div class="col">
-                            <h2><a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a></h2>
-                            <p> {{ entry.snippet|safe }}... </p>
-                            <div id="hr"></div>
-                        </div>
-                        {% endif %}
-                    {% empty %}
-                    <h2>Sorry, no blogs here yet :(</h2>
-                    {% endfor %}
-            </div>
-          </div>
+{% extends "./base.html" %} {% load static %} {% block title %}{{highest_rated.title}}{% endblock %} {% block extra_css %}
+<link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/blog.css'%}/> {% endblock %} {% block content %}
+<div class="blog">
+    <h1>New hotness</h1>
+    <div class="container">
+        <div class="row">
+            {% for entry in blogs %} {% if forloop.counter
+            <=5 %} <div class="col">
+                <h2>
+                    <a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
+                </h2>
+                <p> {{ entry.snippet|safe }}... </p>
+                <div id="hr"></div>
         </div>
+        {% endif %} {% empty %}
+        <h2>Sorry, no blogs here yet :(</h2>
+        {% endfor %}
+    </div>
+</div>
+</div>
 
 {% endblock %}
