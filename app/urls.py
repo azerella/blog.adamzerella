@@ -1,5 +1,6 @@
 from django.urls import path
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
 
 from .sitemap import BlogSitemap, BaseSitemap
 from . import views
@@ -16,7 +17,6 @@ urlpatterns = [
     path('blog/<slug:slug>/', views.blog_entry, name='blog_entry'),
     path('archive/', views.archive, name='archive'),
     path('register_subscriber/', views.register_subscriber, name='register_subscriber'),
-    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
-
-    # TODO path('robots.txt/', views.robots, name='robots')
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('robots.txt/', views.robots, name='robots')
 ]

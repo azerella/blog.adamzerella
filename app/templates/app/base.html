@@ -33,18 +33,6 @@
         <meta property="og:description" content="Adam Zerella's software blog." />
         <!-- End meta tags -->
 
-        <!-- <script src="{% static 'app/scripts/main.js' %}"></script> -->
-
-        <!-- Start Google AdSense -->
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-5402018156533225",
-            enable_page_level_ads: true
-          });
-        </script>
-        <!-- End Google AdSense -->
-
         <!-- Start Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115475837-2"></script>
         <script>
@@ -64,7 +52,7 @@
         </nav>
         <div class="sidebar">
             <a href="{% url 'blog' %}"><div class="face"></div></a>
-            <div class="ad"></div>
+            <!-- <div class="ad"></div> -->
         </div>
         <div id="content">
             {% block content %}{% endblock %}

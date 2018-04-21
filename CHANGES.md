@@ -7,6 +7,10 @@
     with validation of `csrftoken`
 *   Added CSS style to email form `.valid_form` and `.invalid_form` class
 *   Tweaked colour brightness based on rating for `archive.html`
+*   Implemented rendering a robots.txt file
+*   Added comments to `views.py`
+*   Hid banner ad div
+*   Removed AdSense script in `base.html`
 
 ---
 ## 0.0.3
