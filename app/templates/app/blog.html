@@ -1,5 +1,5 @@
 {% extends "./base.html" %} {% load static %} {% block title %}{{highest_rated.title}}{% endblock %} {% block extra_css %}
-<link rel="stylesheet" type="text/css" href={% static 'app/stylesheets/blog.css'%}/> {% endblock %} {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/stylesheets/blog.css' %}" /> {% endblock %} {% block content %}
 <div class="blog">
     <h1>New hotness</h1>
     <div class="container">
@@ -12,9 +12,9 @@
                 <p> {{ entry.snippet|safe }}... </p>
                 <div id="hr"></div>
         </div>
-        {% endif %} {% empty %}
+        {% empty %}
         <h2>Sorry, no blogs here yet :(</h2>
-        {% endfor %}
+        {% endif %} {% endfor %}
     </div>
 </div>
 </div>

@@ -42,7 +42,8 @@ export BAZ_STATIC_ROOT="/var/www/example.com/static/"     #Static content loc
 
 ### Setup app
 ```python
-python manage.py migrate                        #Initialise database tables
+python manage.py makemigrations                 #Initialise database tables
+python manage.py migrate                        #Apply schema
 python manage.py loaddata blog subscribers      #load mock data
 python manage.py createsuperuser                #Create admin account
 ```
@@ -56,8 +57,4 @@ python manage.py runserver
 ### Test
 ```python
 python -Wall manage.py test app
-```
-
-### Deployment
-```
 ```
