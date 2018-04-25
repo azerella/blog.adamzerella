@@ -4,17 +4,19 @@
     <h1>New hotness</h1>
     <div class="container">
         <div class="row">
-            {% for entry in blogs %} {% if forloop.counter
-            <=5 %} <div class="col">
-                <h2>
-                    <a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
-                </h2>
-                <p> {{ entry.snippet|safe }}... </p>
-                <div id="hr"></div>
-        </div>
-        {% empty %}
-        <h2>Sorry, no blogs here yet :(</h2>
-        {% endif %} {% endfor %}
+            {% for entry in blogs %} 
+                {% if forloop.counter <=5 and entry.status == 2 %} 
+                <div class="col">
+                    <h2>
+                        <a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
+                    </h2>
+                    <p> {{ entry.snippet|safe }}... </p>
+                    <div id="hr"></div>
+                </div>
+            {% endif %} 
+            {% empty %}
+                <h2>Sorry, no blogs here yet :(</h2>
+        {% endfor %}
     </div>
 </div>
 </div>
