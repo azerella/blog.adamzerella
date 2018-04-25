@@ -132,6 +132,20 @@ body > #content {
 
 code {
     color: #dede4d;
+    background-color: black;
+    border: 1px solid #144952;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+code > li{
+    list-style: decimal;
+    max-width: 70%;
+}
+
+code > p{
+    background-color: black;
+    max-width: 70%;
 }
 
 form > input[type="text"] {
