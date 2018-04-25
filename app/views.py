@@ -1,3 +1,5 @@
+import logging
+
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, get_object_or_404
 
@@ -53,21 +55,15 @@ def archive(request):
 
 
 """
-Render the view for a robots.txt file
-"""
-def robots(request):
-    return render(request, 'app/robots.txt', {})
-
-
-"""
 Handle requests on the SignupForm
 """
 def register_subscriber(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            print('[SUCCESS] : New sub: %s' % form.data['username'])
+            logging.info('[SUCCESS] : New sub: %s', form.data['username'])
             return HttpResponse('')
-        print('[FAIL] : Invalid sub: %s' % form.data['username'])
+        logging.error('[FAIL] : Invalid sub: %s', form.data['username'])
         return HttpResponseBadRequest('')
+    return HttpResponseBadRequest('')
         
