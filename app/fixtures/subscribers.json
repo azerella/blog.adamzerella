@@ -3,42 +3,48 @@
         "model": "app.subscriber",
         "pk": 1,
         "fields": {
-            "username": "steve@test.com"
+            "username": "steve@test.com",
+            "verified": false
         }
     },
     {
         "model": "app.subscriber",
         "pk": 2,
         "fields": {
-            "username": "bob@test.com"
+            "username": "bob@test.com",
+            "verified": false
         }
     },
     {
         "model": "app.subscriber",
         "pk": 3,
         "fields": {
-            "username": "billy@test.com"
+            "username": "billy@test.com",
+            "verified": false
         }
     },
     {
         "model": "app.subscriber",
         "pk": 4,
         "fields": {
-            "username": "jeff@test.com"
+            "username": "jeff@test.com",
+            "verified": true
         }
     },
     {
         "model": "app.subscriber",
         "pk": 5,
         "fields": {
-            "username": "alice@test.com"
+            "username": "alice@test.com",
+            "verified": false
         }
     },
     {
         "model": "app.subscriber",
         "pk": 6,
         "fields": {
-            "username": "ash@test.com"
+            "username": "ash@test.com",
+            "verified": true
         }
     }
 ]
