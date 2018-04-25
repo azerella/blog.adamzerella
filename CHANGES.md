@@ -11,6 +11,13 @@
 *   Added comments to `views.py`
 *   Hid banner ad div
 *   Removed AdSense script in `base.html`
+*   Added verified field to Subscriber model
+*   Linked `base.html` sitemap to production ref
+*   Robots.txt tweaks
+*   Added new fields to subscriber
+*   Added verified tag to subscriber fixtures
+*   Added security and email settings to settings.py, removed comments
+*   Modified project with prettier
 
 ---
 ## 0.0.3
