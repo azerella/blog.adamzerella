@@ -61,9 +61,9 @@ def register_subscriber(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            logging.info('[SUCCESS] : New sub: %s', form.data['username'])
+            logging.info('New subscriber: %s', form.data['username'])
             return HttpResponse('')
-        logging.error('[FAIL] : Invalid sub: %s', form.data['username'])
+        logging.error('Invalid subscriber: %s', form.data['username'])
         return HttpResponseBadRequest('')
     return HttpResponseBadRequest('')
         

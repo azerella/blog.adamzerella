@@ -1,0 +1,6 @@
+Sitemap: https://blog.adamzerella.com/sitemap.xml/
+
+User-agent: *
+Disallow: /
+Allow: /blog
+Allow: /blog/**
