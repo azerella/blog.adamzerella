@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             {% for entry in blogs %} 
-                {% if forloop.counter <=5 and entry.status == 2 %} 
+                {% if forloop.counter <= 5 and entry.status == 2 %} 
                 <div class="col">
                     <h2>
                         <a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
