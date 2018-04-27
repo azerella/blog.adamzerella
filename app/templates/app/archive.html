@@ -10,7 +10,7 @@
                 <li>
                     <a style="color: rgb(50,{% widthratio entry.rating 2 12 %},250)" href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a>
                     </br>
-                    {{ entry.created_date|date:"l jS M\, Y" }}
+                    <u>{{ entry.created_date|date:"l jS M\, Y" }}</u>
                 </li>
                 </br>
             </div>
