@@ -7,7 +7,7 @@ class SignupForm(forms.Form):
     username = forms.EmailField(
         label=False,
         widget=forms.EmailInput(
-            attrs={'placeholder':'email'}
+            attrs={'placeholder':'Email here!'}
         ),
         max_length=80)
 

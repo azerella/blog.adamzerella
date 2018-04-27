@@ -11,7 +11,9 @@ from .models import Blog
 Render the view for the about page
 """
 def about(request):
-    context = {}
+    context = {
+        "blogs": Blog.objects.all()
+    }
     return render(request, 'app/about.html', context)
 
 
@@ -32,7 +34,8 @@ Render the view for a blog entry page
 def blog_entry(request, slug):
     entry = get_object_or_404(Blog, slug=slug)
     context = {
-        "entry": get_object_or_404(Blog, slug=slug)
+        "entry": get_object_or_404(Blog, slug=slug),
+        "blogs": Blog.objects.all()
     }
 
     #   Increment rating on page view

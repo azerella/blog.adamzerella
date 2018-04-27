@@ -1,21 +1,10 @@
 {% extends "./base.html" %} {% load static %} {% block title %}{{entry.title}}{% endblock %} {% block content %}
 <div class="blog_entry">
     <h1>{{ entry.title }}</h1>
-    {{ entry.created_date|date:"l jS M\, Y" }}</br>
-    </br>
+    <p class="date">Posted on <u>{{ entry.created_date|date:"l jS M\, Y" }}</u></p>
     {{ entry.body|safe }}
 </div>
 </br>
 <div id="hr"></div>
 </br>
-
-<div class="feedback">
-    <form action="" method="post">
-        {% csrf_token %}
-        <textarea rows="4" cols="50" placeholder="... "></textarea>
-        </br>
-        <input type="submit" value="Comment">
-    </form>
-</div>
-</form>
 {% endblock %}

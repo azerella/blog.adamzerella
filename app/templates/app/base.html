@@ -55,7 +55,18 @@
         <a href="{% url 'blog' %}">
             <div class="face"></div>
         </a>
-        <!-- <div class="ad"></div> -->
+        <div class="table">
+        <h3>Recent Posts</h3>
+        <ul>
+            {% for entry in blogs %} 
+                {% if forloop.counter <= 5 and entry.status == 2 %} 
+                    <li><a href="{% url 'blog_entry' entry.slug %}">{{ entry.title }}</a></li>
+                {% endif %} 
+                {% empty %}
+                    <li>Sorry, no blogs here yet :(</li>
+            {% endfor %}
+        </ul>
+        </div>
     </div>
     <div id="content">
         {% block content %}{% endblock %}
@@ -63,7 +74,7 @@
 
     <footer>
         <div class="footer-col" style="width: 75%">
-            <h2>Connect</h2>
+            <h2>Subscribe</h2>
             <form action='' id='signup_form' method="POST">
                 {% csrf_token %} {{ signup_form }}
                 <input type="submit" name="submit" value="Submit" />
@@ -74,7 +85,6 @@
             <h2>Site</h2>
             <p>
                 <a href="https://github.com/adamzerella/blog.adamzerella/">Source Code</a>
-                </br>
                 </br>
                 </br>
                 <a href="https://blog.adamzerella.com/sitemap.xml/">Sitemap</a>

@@ -17,6 +17,43 @@ body {
     padding: 0;
 }
 
+h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    color: white;
+    font-size: 14px;
+}
+
+a {
+    color: white;
+    margin-right: 1.5em;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dede4d;
+    padding-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+ul {
+    display: inline;
+}
+
+li {
+    list-style: none;
+}
+
 body > nav {
     color: #dede4d;
     margin-top: 1em;
@@ -25,53 +62,9 @@ body > nav {
     width: 100%;
 }
 
-p {
-    line-height: 1.6;
-}
-
-a {
-    color: #b7cacc;
-    margin-right: 1.5em;
-    text-decoration: none;
-}
-
-strong {
-    color: white;
-}
-
-a:hover {
-    color: #dede4d;
-    padding-bottom: 6px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
-
-a:visited {
-    color: #b7cacc;
-    background-color: yellow;
-    border-bottom-color: #dede4d;
-    /*Unable to style a:visited links due to security concerns:
-    https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
-    */
-}
-
-a:active {
-    color: #b7cacc;
-    padding-bottom: 6px;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
-
-.sidebar > a {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    border-style: none;
-}
-
 body > footer {
     position: fixed;
-    display: inline-flex;
+    display: flex;
     bottom: 0;
     width: 100%;
     margin: 0px;
@@ -80,6 +73,33 @@ body > footer {
     text-align: left;
     background-color: #021013;
     border-top: 1px solid #144952;
+}
+
+body > .sidebar > .table > h3 {
+    text-align: center;
+}
+
+body > .sidebar > .table > ul {
+    display: inherit;
+}
+
+body > .sidebar > .table > ul > li {
+    list-style: circle;
+}
+
+body > .sidebar > a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border-style: none;
+}
+
+body > .sidebar > .table {
+    color: #b7cacc;
+}
+
+.blog_entry > p {
+    line-height: 1.6;
 }
 
 footer > .footer-col {
@@ -99,14 +119,14 @@ body > .sidebar {
     padding: 1em;
     background-color: transparent;
     width: 128px;
-    height: 128px;
+    height: 100vh;
     z-index: 1;
     top: 0;
     left: 0;
     vertical-align: top;
     float: left;
-    min-height: 128px;
-    max-height: 128px;
+    /* min-height: 128px; */
+    /* max-height: 128px; */
 }
 
 body > #content {
@@ -131,20 +151,21 @@ body > #content {
 }
 
 code {
-    color: #dede4d;
-    background-color: black;
+    color: #b7cacc;
+    width: 100%;
+    display: table-cell;
+    background-color: #0a2429;
     border: 1px solid #144952;
     line-height: 1.6;
     font-size: 14px;
 }
 
-code > li{
+code > li {
     list-style: decimal;
     max-width: 70%;
 }
 
-code > p{
-    background-color: black;
+code > p {
     max-width: 70%;
 }
 
@@ -237,4 +258,8 @@ form > textarea {
 #hr {
     border-top: 1px solid #144952;
     display: flex;
+}
+
+.date {
+    font-size: 12px;
 }
