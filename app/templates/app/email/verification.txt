@@ -1,0 +1,5 @@
+Hello {{ username }}!
+
+Once verified, I'll send you another email to explain the benefits of being a subscriber. :)
+
+Please click on the following verification link to activate your email: {{ verify }}

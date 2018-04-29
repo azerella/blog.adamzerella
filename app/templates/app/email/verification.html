@@ -1,0 +1,6 @@
+<p>Hello {{ username|safe }}! </br>
+
+Once verified, I'll send you another email to explain the benefits of being a subscriber. 😃</br>
+
+Please click on the following verification link to activate your email:
+<a href="{% url 'confirm.html' verify %}" alt="Verification link">{{ verify }}</a></p>

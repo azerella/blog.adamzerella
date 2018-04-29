@@ -22,14 +22,12 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 #---------------
 
 # Email settings
-EMAIL_HOST = None
-EMAIL_PORT = 587
-EMAIL_HOST_USER = None
-EMAIL_HOST_PASSWORD = None
-EMAIL_USE_TLS = True
-EMAIL_TIMEOUT = 60
-EMAIL_SSL_KEYFILE = None
-EMAIL_SSL_CERTFILE = None
+EMAIL_HOST = '127.0.0.1'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #---------------
 
 INSTALLED_APPS = [
@@ -58,7 +56,9 @@ ROOT_URLCONF = 'blogadamzerella.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, "app/templates/app/email/")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,7 +124,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
